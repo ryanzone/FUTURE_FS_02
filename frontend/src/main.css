@@ -1,0 +1,104 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* ===== FORMS ===== */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #fff;
+  padding: 25px;
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1e40af;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+  padding: 30px;
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+}
+
+.lead-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.lead-table th,
+.lead-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.lead-table th {
+  background: #f1f5f9;
+}
+
+.lead-table tr:hover {
+  background: #f9fafb;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-new {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.status-contacted {
+  color: #ca8a04;
+  font-weight: bold;
+}
+
+.status-converted {
+  color: #16a34a;
+  font-weight: bold;
+}
