@@ -1,21 +1,17 @@
 # 🧾 Mini CRM – Client Lead Management System
 
-A full-stack **Client Lead Management System (Mini CRM)** built using the MERN stack.
-
-This application simulates how real businesses collect customer enquiries from a website and manage them through an admin dashboard.
+A full-stack **Client Lead Management System (Mini CRM)** built using the MERN stack. This application simulates how real businesses collect customer enquiries from a website and manage them through an admin dashboard.
 
 ---
 
 ## 🚀 Features
 
 ### 🌐 Public Side
-
 - Contact form for customers
 - Lead data stored in MongoDB
 - Simulates real website enquiries
 
 ### 🔐 Admin Panel
-
 - Secure admin login (JWT authentication)
 - View all leads
 - Update lead status:
@@ -31,7 +27,6 @@ This application simulates how real businesses collect customer enquiries from a
 ## 🛠 Tech Stack
 
 ### Frontend
-
 - React (Vite)
 - JavaScript
 - CSS
@@ -39,7 +34,6 @@ This application simulates how real businesses collect customer enquiries from a
 - React Router DOM
 
 ### Backend
-
 - Node.js
 - Express.js
 - MongoDB Atlas
@@ -51,36 +45,40 @@ This application simulates how real businesses collect customer enquiries from a
 
 ## 📁 Project Structure
 
+```
 FUTURE_FS_02
 │
 ├── backend
-│ ├── controllers
-│ ├── middleware
-│ ├── models
-│ ├── routes
-│ ├── server.js
-│ ├── package.json
-│ └── .env.example
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   ├── package.json
+│   └── .env.example
 │
 ├── frontend
-│ ├── src
-│ ├── public
-│ ├── index.html
-│ ├── vite.config.js
-│ └── package.json
+│   ├── src
+│   ├── public
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
 │
 ├── README.md
 └── .gitignore
+```
 
 ---
 
 ## 🔑 Environment Variables
 
-Create a `.env` file inside the **backend** folder.
+Create a `.env` file inside the **backend** folder:
 
+```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
+```
 
 ⚠️ `.env` is ignored from GitHub for security.
 
@@ -91,88 +89,124 @@ PORT=5000
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone
+git clone https://github.com/yourusername/mini-crm.git
 cd mini-crm
+```
 
+### 2️⃣ Backend Setup
+
+```bash
 cd backend
 npm install
 npm run dev
-
 ```
 
-| Route        | Description            |
-| ------------ | ---------------------- | ------------------ |
-| `/`          | Contact form           |
-| `/login`     | Admin login            |
-| `/dashboard` | Admin dashboard        |
-| Method       | Endpoint               | Description        |
-| ------       | ---------------------- | ------------------ |
-| POST         | `/api/admin/login`     | Admin login        |
-| POST         | `/api/leads`           | Create lead        |
-| GET          | `/api/leads`           | Get all leads      |
-| PUT          | `/api/leads/:id`       | Update lead status |
-| PUT          | `/api/leads/:id/notes` | Update notes       |
-| DELETE       | `/api/leads/:id`       | Delete lead        |
+### 3️⃣ Frontend Setup
 
+Open a new terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 4️⃣ Access the Application
+
+- **Frontend:** http://localhost:5173
+- **Backend:** http://localhost:5000
+
+---
+
+## 🌐 Routes
+
+### Frontend Routes
+
+| Route        | Description     |
+|-------------|-----------------|
+| `/`         | Contact form    |
+| `/login`    | Admin login     |
+| `/dashboard`| Admin dashboard |
+
+### Backend API Endpoints
+
+| Method | Endpoint               | Description        |
+|--------|------------------------|--------------------|
+| POST   | `/api/admin/login`     | Admin login        |
+| POST   | `/api/leads`           | Create lead        |
+| GET    | `/api/leads`           | Get all leads      |
+| PUT    | `/api/leads/:id`       | Update lead status |
+| PUT    | `/api/leads/:id/notes` | Update notes       |
+| DELETE | `/api/leads/:id`       | Delete lead        |
+
+---
+
+## 📊 Lead Status Flow
+
+```
 New → Contacted → Converted
-🔐 Security
+```
 
-JWT-based authentication
+---
 
-Protected admin routes
+## 🔐 Security
 
-Passwords hashed using bcrypt
+- JWT-based authentication
+- Protected admin routes
+- Passwords hashed using bcrypt
+- MongoDB Atlas cloud database
 
-MongoDB Atlas cloud database
+---
 
-🧠 Learning Outcomes
+## 🧠 Learning Outcomes
 
-REST API development
+- REST API development
+- CRUD operations
+- MongoDB schema design
+- Authentication & authorization
+- Frontend–backend integration
+- Real-world CRM workflow
+- GitHub project structuring
 
-CRUD operations
+---
 
-MongoDB schema design
+## 📸 Screenshots (Optional)
 
-Authentication & authorization
+- Contact Form
+- Admin Login
+- Dashboard
+- Lead notes & status updates
 
-Frontend–backend integration
+---
 
-Real-world CRM workflow
-
-GitHub project structuring
-
-📸 Screens (Optional)
-
-Contact Form
-
-Admin Login
-
-Dashboard
-
-Lead notes & status updates
-
-💼 Internship Task
+## 💼 Internship Task
 
 This project was built as part of:
 
-Future Interns – Full Stack Development Task 2
+**Future Interns – Full Stack Development**  
+**Task 2: Client Lead Management System (Mini CRM)**
 
-Client Lead Management System (Mini CRM)
+---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Ryan John
+**Ryan John**
 
-✅ Final Notes
+---
+
+## ✅ Final Notes
 
 This Mini CRM demonstrates how real businesses:
 
-collect enquiries
-
-manage potential clients
-
-track conversions
-
-store and secure customer data
+- Collect enquiries
+- Manage potential clients
+- Track conversions
+- Store and secure customer data
 
 It closely reflects real-world agency and startup workflows.
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
