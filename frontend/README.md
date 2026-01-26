@@ -1,16 +1,178 @@
-# React + Vite
+# 🧾 Mini CRM – Client Lead Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Client Lead Management System (Mini CRM)** built using the MERN stack.
 
-Currently, two official plugins are available:
+This application simulates how real businesses collect customer enquiries from a website and manage them through an admin dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🌐 Public Side
 
-## Expanding the ESLint configuration
+- Contact form for customers
+- Lead data stored in MongoDB
+- Simulates real website enquiries
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔐 Admin Panel
+
+- Secure admin login (JWT authentication)
+- View all leads
+- Update lead status:
+  - New
+  - Contacted
+  - Converted
+- Add follow-up notes
+- Delete leads
+- Protected admin routes
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React (Vite)
+- JavaScript
+- CSS
+- Axios
+- React Router DOM
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- bcryptjs
+
+---
+
+## 📁 Project Structure
+
+FUTURE_FS_02
+│
+├── backend
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── routes
+│ ├── server.js
+│ ├── package.json
+│ └── .env.example
+│
+├── frontend
+│ ├── src
+│ ├── public
+│ ├── index.html
+│ ├── vite.config.js
+│ └── package.json
+│
+├── README.md
+└── .gitignore
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the **backend** folder.
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+
+⚠️ `.env` is ignored from GitHub for security.
+
+---
+
+## ▶️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone
+cd mini-crm
+
+cd backend
+npm install
+npm run dev
+
+```
+
+| Route        | Description            |
+| ------------ | ---------------------- | ------------------ |
+| `/`          | Contact form           |
+| `/login`     | Admin login            |
+| `/dashboard` | Admin dashboard        |
+| Method       | Endpoint               | Description        |
+| ------       | ---------------------- | ------------------ |
+| POST         | `/api/admin/login`     | Admin login        |
+| POST         | `/api/leads`           | Create lead        |
+| GET          | `/api/leads`           | Get all leads      |
+| PUT          | `/api/leads/:id`       | Update lead status |
+| PUT          | `/api/leads/:id/notes` | Update notes       |
+| DELETE       | `/api/leads/:id`       | Delete lead        |
+
+New → Contacted → Converted
+🔐 Security
+
+JWT-based authentication
+
+Protected admin routes
+
+Passwords hashed using bcrypt
+
+MongoDB Atlas cloud database
+
+🧠 Learning Outcomes
+
+REST API development
+
+CRUD operations
+
+MongoDB schema design
+
+Authentication & authorization
+
+Frontend–backend integration
+
+Real-world CRM workflow
+
+GitHub project structuring
+
+📸 Screens (Optional)
+
+Contact Form
+
+Admin Login
+
+Dashboard
+
+Lead notes & status updates
+
+💼 Internship Task
+
+This project was built as part of:
+
+Future Interns – Full Stack Development Task 2
+
+Client Lead Management System (Mini CRM)
+
+👨‍💻 Author
+
+Ryan John
+
+✅ Final Notes
+
+This Mini CRM demonstrates how real businesses:
+
+collect enquiries
+
+manage potential clients
+
+track conversions
+
+store and secure customer data
+
+It closely reflects real-world agency and startup workflows.
